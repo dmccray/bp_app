@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		931B36951873A6D3001E8890 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B36941873A6D3001E8890 /* Foundation.framework */; };
+		931B36971873A6D3001E8890 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B36961873A6D3001E8890 /* CoreGraphics.framework */; };
+		931B36991873A6D3001E8890 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B36981873A6D3001E8890 /* UIKit.framework */; };
+		931B369B1873A6D3001E8890 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B369A1873A6D3001E8890 /* CoreData.framework */; };
+		931B36A11873A6D3001E8890 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 931B369F1873A6D3001E8890 /* InfoPlist.strings */; };
+		931B36A31873A6D3001E8890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36A21873A6D3001E8890 /* main.m */; };
+		931B36A71873A6D3001E8890 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36A61873A6D3001E8890 /* AppDelegate.m */; };
+		931B36AA1873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 931B36A81873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodeld */; };
+		931B36AC1873A6D3001E8890 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931B36AB1873A6D3001E8890 /* Images.xcassets */; };
+		931B36B31873A6D3001E8890 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B36B21873A6D3001E8890 /* XCTest.framework */; };
+		931B36B41873A6D3001E8890 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B36941873A6D3001E8890 /* Foundation.framework */; };
+		931B36B51873A6D3001E8890 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B36981873A6D3001E8890 /* UIKit.framework */; };
+		931B36B61873A6D3001E8890 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B369A1873A6D3001E8890 /* CoreData.framework */; };
+		931B36BE1873A6D4001E8890 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 931B36BC1873A6D4001E8890 /* InfoPlist.strings */; };
+		931B36C01873A6D4001E8890 /* Blood_Pressure_GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36BF1873A6D4001E8890 /* Blood_Pressure_GameTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		931B36B71873A6D4001E8890 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 931B36891873A6D3001E8890 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 931B36901873A6D3001E8890;
+			remoteInfo = "Blood Pressure Game";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		931B36911873A6D3001E8890 /* Blood Pressure Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Blood Pressure Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		931B36941873A6D3001E8890 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		931B36961873A6D3001E8890 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		931B36981873A6D3001E8890 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		931B369A1873A6D3001E8890 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		931B369E1873A6D3001E8890 /* Blood Pressure Game-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Blood Pressure Game-Info.plist"; sourceTree = "<group>"; };
+		931B36A01873A6D3001E8890 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		931B36A21873A6D3001E8890 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		931B36A41873A6D3001E8890 /* Blood Pressure Game-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blood Pressure Game-Prefix.pch"; sourceTree = "<group>"; };
+		931B36A51873A6D3001E8890 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		931B36A61873A6D3001E8890 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		931B36A91873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blood_Pressure_Game.xcdatamodel; sourceTree = "<group>"; };
+		931B36AB1873A6D3001E8890 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		931B36B11873A6D3001E8890 /* Blood Pressure GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blood Pressure GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		931B36B21873A6D3001E8890 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		931B36BB1873A6D4001E8890 /* Blood Pressure GameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Blood Pressure GameTests-Info.plist"; sourceTree = "<group>"; };
+		931B36BD1873A6D4001E8890 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		931B36BF1873A6D4001E8890 /* Blood_Pressure_GameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Blood_Pressure_GameTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		931B368E1873A6D3001E8890 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				931B36971873A6D3001E8890 /* CoreGraphics.framework in Frameworks */,
+				931B369B1873A6D3001E8890 /* CoreData.framework in Frameworks */,
+				931B36991873A6D3001E8890 /* UIKit.framework in Frameworks */,
+				931B36951873A6D3001E8890 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		931B36AE1873A6D3001E8890 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				931B36B31873A6D3001E8890 /* XCTest.framework in Frameworks */,
+				931B36B61873A6D3001E8890 /* CoreData.framework in Frameworks */,
+				931B36B51873A6D3001E8890 /* UIKit.framework in Frameworks */,
+				931B36B41873A6D3001E8890 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		931B36881873A6D3001E8890 = {
+			isa = PBXGroup;
+			children = (
+				931B369C1873A6D3001E8890 /* Blood Pressure Game */,
+				931B36B91873A6D4001E8890 /* Blood Pressure GameTests */,
+				931B36931873A6D3001E8890 /* Frameworks */,
+				931B36921873A6D3001E8890 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		931B36921873A6D3001E8890 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				931B36911873A6D3001E8890 /* Blood Pressure Game.app */,
+				931B36B11873A6D3001E8890 /* Blood Pressure GameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		931B36931873A6D3001E8890 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				931B36941873A6D3001E8890 /* Foundation.framework */,
+				931B36961873A6D3001E8890 /* CoreGraphics.framework */,
+				931B36981873A6D3001E8890 /* UIKit.framework */,
+				931B369A1873A6D3001E8890 /* CoreData.framework */,
+				931B36B21873A6D3001E8890 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		931B369C1873A6D3001E8890 /* Blood Pressure Game */ = {
+			isa = PBXGroup;
+			children = (
+				931B36A51873A6D3001E8890 /* AppDelegate.h */,
+				931B36A61873A6D3001E8890 /* AppDelegate.m */,
+				931B36AB1873A6D3001E8890 /* Images.xcassets */,
+				931B36A81873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodeld */,
+				931B369D1873A6D3001E8890 /* Supporting Files */,
+			);
+			path = "Blood Pressure Game";
+			sourceTree = "<group>";
+		};
+		931B369D1873A6D3001E8890 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				931B369E1873A6D3001E8890 /* Blood Pressure Game-Info.plist */,
+				931B369F1873A6D3001E8890 /* InfoPlist.strings */,
+				931B36A21873A6D3001E8890 /* main.m */,
+				931B36A41873A6D3001E8890 /* Blood Pressure Game-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		931B36B91873A6D4001E8890 /* Blood Pressure GameTests */ = {
+			isa = PBXGroup;
+			children = (
+				931B36BF1873A6D4001E8890 /* Blood_Pressure_GameTests.m */,
+				931B36BA1873A6D4001E8890 /* Supporting Files */,
+			);
+			path = "Blood Pressure GameTests";
+			sourceTree = "<group>";
+		};
+		931B36BA1873A6D4001E8890 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				931B36BB1873A6D4001E8890 /* Blood Pressure GameTests-Info.plist */,
+				931B36BC1873A6D4001E8890 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		931B36901873A6D3001E8890 /* Blood Pressure Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 931B36C31873A6D4001E8890 /* Build configuration list for PBXNativeTarget "Blood Pressure Game" */;
+			buildPhases = (
+				931B368D1873A6D3001E8890 /* Sources */,
+				931B368E1873A6D3001E8890 /* Frameworks */,
+				931B368F1873A6D3001E8890 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Blood Pressure Game";
+			productName = "Blood Pressure Game";
+			productReference = 931B36911873A6D3001E8890 /* Blood Pressure Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		931B36B01873A6D3001E8890 /* Blood Pressure GameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 931B36C61873A6D4001E8890 /* Build configuration list for PBXNativeTarget "Blood Pressure GameTests" */;
+			buildPhases = (
+				931B36AD1873A6D3001E8890 /* Sources */,
+				931B36AE1873A6D3001E8890 /* Frameworks */,
+				931B36AF1873A6D3001E8890 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				931B36B81873A6D4001E8890 /* PBXTargetDependency */,
+			);
+			name = "Blood Pressure GameTests";
+			productName = "Blood Pressure GameTests";
+			productReference = 931B36B11873A6D3001E8890 /* Blood Pressure GameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		931B36891873A6D3001E8890 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Derrick McCray";
+				TargetAttributes = {
+					931B36B01873A6D3001E8890 = {
+						TestTargetID = 931B36901873A6D3001E8890;
+					};
+				};
+			};
+			buildConfigurationList = 931B368C1873A6D3001E8890 /* Build configuration list for PBXProject "Blood Pressure Game" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 931B36881873A6D3001E8890;
+			productRefGroup = 931B36921873A6D3001E8890 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				931B36901873A6D3001E8890 /* Blood Pressure Game */,
+				931B36B01873A6D3001E8890 /* Blood Pressure GameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		931B368F1873A6D3001E8890 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				931B36A11873A6D3001E8890 /* InfoPlist.strings in Resources */,
+				931B36AC1873A6D3001E8890 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		931B36AF1873A6D3001E8890 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				931B36BE1873A6D4001E8890 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		931B368D1873A6D3001E8890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				931B36AA1873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodeld in Sources */,
+				931B36A71873A6D3001E8890 /* AppDelegate.m in Sources */,
+				931B36A31873A6D3001E8890 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		931B36AD1873A6D3001E8890 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				931B36C01873A6D4001E8890 /* Blood_Pressure_GameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		931B36B81873A6D4001E8890 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 931B36901873A6D3001E8890 /* Blood Pressure Game */;
+			targetProxy = 931B36B71873A6D4001E8890 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		931B369F1873A6D3001E8890 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				931B36A01873A6D3001E8890 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		931B36BC1873A6D4001E8890 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				931B36BD1873A6D4001E8890 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		931B36C11873A6D4001E8890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		931B36C21873A6D4001E8890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		931B36C41873A6D4001E8890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blood Pressure Game/Blood Pressure Game-Prefix.pch";
+				INFOPLIST_FILE = "Blood Pressure Game/Blood Pressure Game-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		931B36C51873A6D4001E8890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blood Pressure Game/Blood Pressure Game-Prefix.pch";
+				INFOPLIST_FILE = "Blood Pressure Game/Blood Pressure Game-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		931B36C71873A6D4001E8890 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Blood Pressure Game.app/Blood Pressure Game";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blood Pressure Game/Blood Pressure Game-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Blood Pressure GameTests/Blood Pressure GameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		931B36C81873A6D4001E8890 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Blood Pressure Game.app/Blood Pressure Game";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Blood Pressure Game/Blood Pressure Game-Prefix.pch";
+				INFOPLIST_FILE = "Blood Pressure GameTests/Blood Pressure GameTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		931B368C1873A6D3001E8890 /* Build configuration list for PBXProject "Blood Pressure Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				931B36C11873A6D4001E8890 /* Debug */,
+				931B36C21873A6D4001E8890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		931B36C31873A6D4001E8890 /* Build configuration list for PBXNativeTarget "Blood Pressure Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				931B36C41873A6D4001E8890 /* Debug */,
+				931B36C51873A6D4001E8890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		931B36C61873A6D4001E8890 /* Build configuration list for PBXNativeTarget "Blood Pressure GameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				931B36C71873A6D4001E8890 /* Debug */,
+				931B36C81873A6D4001E8890 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		931B36A81873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				931B36A91873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodel */,
+			);
+			currentVersion = 931B36A91873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodel */;
+			path = Blood_Pressure_Game.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 931B36891873A6D3001E8890 /* Project object */;
+}
