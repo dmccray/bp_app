@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "BPReading.h"
+#import "BPReadingViewController.h"
+#import "BPLogViewController.h"
 
 @implementation AppDelegate
 
@@ -16,10 +19,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    BPReadingViewController *bprvc = [[BPReadingViewController alloc] init];
+    bprvc.managedObjectContext = self.managedObjectContext;
+    
+    BPLogViewController *bplvc = [[BPLogViewController alloc] initWithStyle:UITableViewStylePlain];
+    bplvc.managedObjectContext = self.managedObjectContext;
+    
+    UITabBarController *tbc = [[UITabBarController alloc] init];
+    [tbc setViewControllers:@[bprvc, bplvc] animated:YES];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self.window setRootViewController:tbc];
     return YES;
 }
 
@@ -90,7 +104,7 @@
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Blood_Pressure_Game" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"BPControlModel" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return _managedObjectModel;
 }

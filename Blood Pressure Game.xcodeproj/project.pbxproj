@@ -14,7 +14,6 @@
 		931B36A11873A6D3001E8890 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 931B369F1873A6D3001E8890 /* InfoPlist.strings */; };
 		931B36A31873A6D3001E8890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36A21873A6D3001E8890 /* main.m */; };
 		931B36A71873A6D3001E8890 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36A61873A6D3001E8890 /* AppDelegate.m */; };
-		931B36AA1873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 931B36A81873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodeld */; };
 		931B36AC1873A6D3001E8890 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 931B36AB1873A6D3001E8890 /* Images.xcassets */; };
 		931B36B31873A6D3001E8890 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B36B21873A6D3001E8890 /* XCTest.framework */; };
 		931B36B41873A6D3001E8890 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B36941873A6D3001E8890 /* Foundation.framework */; };
@@ -22,6 +21,10 @@
 		931B36B61873A6D3001E8890 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931B369A1873A6D3001E8890 /* CoreData.framework */; };
 		931B36BE1873A6D4001E8890 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 931B36BC1873A6D4001E8890 /* InfoPlist.strings */; };
 		931B36C01873A6D4001E8890 /* Blood_Pressure_GameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36BF1873A6D4001E8890 /* Blood_Pressure_GameTests.m */; };
+		931B36CB1873A702001E8890 /* BPReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36CA1873A702001E8890 /* BPReading.m */; };
+		931B36CE1873CFC4001E8890 /* BPReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36CD1873CFC4001E8890 /* BPReadingViewController.m */; };
+		93858D001875276900CB4D51 /* BPControlModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93858CFE1875276900CB4D51 /* BPControlModel.xcdatamodeld */; };
+		93ABE3BD1876A80600A7113D /* BPLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABE3BC1876A80600A7113D /* BPLogViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +49,19 @@
 		931B36A41873A6D3001E8890 /* Blood Pressure Game-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blood Pressure Game-Prefix.pch"; sourceTree = "<group>"; };
 		931B36A51873A6D3001E8890 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		931B36A61873A6D3001E8890 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		931B36A91873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blood_Pressure_Game.xcdatamodel; sourceTree = "<group>"; };
 		931B36AB1873A6D3001E8890 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		931B36B11873A6D3001E8890 /* Blood Pressure GameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Blood Pressure GameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		931B36B21873A6D3001E8890 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		931B36BB1873A6D4001E8890 /* Blood Pressure GameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Blood Pressure GameTests-Info.plist"; sourceTree = "<group>"; };
 		931B36BD1873A6D4001E8890 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		931B36BF1873A6D4001E8890 /* Blood_Pressure_GameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Blood_Pressure_GameTests.m; sourceTree = "<group>"; };
+		931B36C91873A702001E8890 /* BPReading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPReading.h; sourceTree = "<group>"; };
+		931B36CA1873A702001E8890 /* BPReading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPReading.m; sourceTree = "<group>"; };
+		931B36CC1873CFC4001E8890 /* BPReadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPReadingViewController.h; sourceTree = "<group>"; };
+		931B36CD1873CFC4001E8890 /* BPReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPReadingViewController.m; sourceTree = "<group>"; };
+		93858CFF1875276900CB4D51 /* BPControlModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BPControlModel.xcdatamodel; sourceTree = "<group>"; };
+		93ABE3BB1876A80600A7113D /* BPLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BPLogViewController.h; path = ../BPLogViewController.h; sourceTree = "<group>"; };
+		93ABE3BC1876A80600A7113D /* BPLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BPLogViewController.m; path = ../BPLogViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +124,11 @@
 		931B369C1873A6D3001E8890 /* Blood Pressure Game */ = {
 			isa = PBXGroup;
 			children = (
+				931B36D01873CFF6001E8890 /* Models */,
+				931B36CF1873CFD6001E8890 /* Views */,
 				931B36A51873A6D3001E8890 /* AppDelegate.h */,
 				931B36A61873A6D3001E8890 /* AppDelegate.m */,
 				931B36AB1873A6D3001E8890 /* Images.xcassets */,
-				931B36A81873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodeld */,
 				931B369D1873A6D3001E8890 /* Supporting Files */,
 			);
 			path = "Blood Pressure Game";
@@ -127,6 +137,7 @@
 		931B369D1873A6D3001E8890 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				93858CFE1875276900CB4D51 /* BPControlModel.xcdatamodeld */,
 				931B369E1873A6D3001E8890 /* Blood Pressure Game-Info.plist */,
 				931B369F1873A6D3001E8890 /* InfoPlist.strings */,
 				931B36A21873A6D3001E8890 /* main.m */,
@@ -151,6 +162,26 @@
 				931B36BC1873A6D4001E8890 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		931B36CF1873CFD6001E8890 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93ABE3BB1876A80600A7113D /* BPLogViewController.h */,
+				93ABE3BC1876A80600A7113D /* BPLogViewController.m */,
+				931B36CC1873CFC4001E8890 /* BPReadingViewController.h */,
+				931B36CD1873CFC4001E8890 /* BPReadingViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		931B36D01873CFF6001E8890 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				931B36C91873A702001E8890 /* BPReading.h */,
+				931B36CA1873A702001E8890 /* BPReading.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				931B36AA1873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodeld in Sources */,
 				931B36A71873A6D3001E8890 /* AppDelegate.m in Sources */,
+				931B36CE1873CFC4001E8890 /* BPReadingViewController.m in Sources */,
+				93ABE3BD1876A80600A7113D /* BPLogViewController.m in Sources */,
+				931B36CB1873A702001E8890 /* BPReading.m in Sources */,
 				931B36A31873A6D3001E8890 /* main.m in Sources */,
+				93858D001875276900CB4D51 /* BPControlModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +485,7 @@
 				931B36C51873A6D4001E8890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		931B36C61873A6D4001E8890 /* Build configuration list for PBXNativeTarget "Blood Pressure GameTests" */ = {
 			isa = XCConfigurationList;
@@ -459,17 +494,18 @@
 				931B36C81873A6D4001E8890 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		931B36A81873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodeld */ = {
+		93858CFE1875276900CB4D51 /* BPControlModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				931B36A91873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodel */,
+				93858CFF1875276900CB4D51 /* BPControlModel.xcdatamodel */,
 			);
-			currentVersion = 931B36A91873A6D3001E8890 /* Blood_Pressure_Game.xcdatamodel */;
-			path = Blood_Pressure_Game.xcdatamodeld;
+			currentVersion = 93858CFF1875276900CB4D51 /* BPControlModel.xcdatamodel */;
+			path = BPControlModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
