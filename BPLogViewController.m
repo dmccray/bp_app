@@ -11,8 +11,6 @@
 
 @interface BPLogViewController ()
     @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-    //@property (strong, nonatomic) NSFetchRequest *request;
-
 @end
 
 @implementation BPLogViewController
@@ -30,6 +28,8 @@
 {
     [super viewDidLoad];
     
+    NSLog(@"View Did Load Called");
+    
     NSError *error;
     if(![self.fetchedResultsController performFetch:&error])
     {
@@ -41,6 +41,11 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"View will appear called");
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +60,9 @@
 {
 //#warning Potentially incomplete method implementation.
     // Return the number of sections.
+    
+    //NSLog(@"Number of Sections %d", self.fetchedResultsController.sections.count);
+    
     return 1;
 }
 
@@ -76,18 +84,16 @@
     
     // Configure the cell...
     if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     BPReading *reading = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    
-    
     NSString *readingInstantString = [NSDateFormatter localizedStringFromDate:reading.readingInstant
                                                                     dateStyle:NSDateFormatterShortStyle
                                                                     timeStyle:NSDateFormatterFullStyle];
-    NSLog(@"Reading: %@", reading);
-    NSLog(@"Reading Instant: %@", readingInstantString);
+    //NSLog(@"Reading: %@", reading);
+    //NSLog(@"Reading Instant: %@", readingInstantString);
     
     cell.textLabel.font = [UIFont systemFontOfSize:10.0];
     cell.textLabel.text = readingInstantString;
@@ -149,36 +155,82 @@
 #pragma mark - fetchResults setup
 - (NSFetchedResultsController *)fetchedResultsController
 {
-    if(_fetchedResultsController != nil)
-    {
-        return _fetchedResultsController;
-    }
+    if(_fetchedResultsController) return _fetchedResultsController;
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     [fetchRequest setEntity:[NSEntityDescription entityForName:@"BPReading" inManagedObjectContext:self.managedObjectContext]];
-    
     [fetchRequest setFetchBatchSize:20];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"readingInstant" ascending:YES];
     [fetchRequest setSortDescriptors:@[sortDescriptor ]];
     
-    //need to learn more about this method call, especially the last two arguments
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-   
     _fetchedResultsController.delegate = self; //set this class as the fetchResultController's delegate
     
     return _fetchedResultsController;
+}
+
+#pragma mark - FetchedResultsController Delegate Methods
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
+{
+    [self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+{
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:sectionIndex];
+
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [[self tableView] insertSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [[self tableView] deleteSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath
+{
+    NSArray *newArray = nil;
+    NSArray *oldArray = nil;
     
+    if(newIndexPath) newArray = [NSArray arrayWithObject:newIndexPath];
+    if(indexPath) oldArray = [NSArray arrayWithObject:indexPath];
+    
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [self.tableView insertRowsAtIndexPaths:newArray withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [self.tableView deleteRowsAtIndexPaths:oldArray withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeUpdate:
+        {
+            UITableViewCell *cell = nil;
+            cell = [self.tableView cellForRowAtIndexPath:indexPath];
+            BPReading *reading = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            NSString *readingInstantString = [NSDateFormatter localizedStringFromDate:reading.readingInstant
+                                                                            dateStyle:NSDateFormatterShortStyle
+                                                                            timeStyle:NSDateFormatterFullStyle];
+        
+            cell.textLabel.font = [UIFont systemFontOfSize:10.0];
+            cell.textLabel.text = readingInstantString;
+
+            break;
+        }
+        case NSFetchedResultsChangeMove:
+            [self.tableView deleteRowsAtIndexPaths:oldArray withRowAnimation:UITableViewRowAnimationFade];
+            [self.tableView insertRowsAtIndexPaths:newArray withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
 }
 
 //not working, need to figure how to update the TableView when the CoreData store has been updated. 
 -(void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
-    NSError *error;
-    if(![controller performFetch:&error])
-    {
-        NSLog(@"Error: %@\n%@",[error localizedDescription], [error userInfo]);
-    }
+    [self.tableView endUpdates];
 }
 
 @end
