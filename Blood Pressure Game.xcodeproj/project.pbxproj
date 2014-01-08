@@ -24,6 +24,12 @@
 		931B36CB1873A702001E8890 /* BPReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36CA1873A702001E8890 /* BPReading.m */; };
 		931B36CE1873CFC4001E8890 /* BPReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36CD1873CFC4001E8890 /* BPReadingViewController.m */; };
 		93858D001875276900CB4D51 /* BPControlModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93858CFE1875276900CB4D51 /* BPControlModel.xcdatamodeld */; };
+		93A6DCE1187CD0E0006946CD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6DCE0187CD0E0006946CD /* HomeViewController.m */; };
+		93A6DCE4187CD388006946CD /* HomeGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6DCE3187CD388006946CD /* HomeGraphView.m */; };
+		93A6DCE8187CDA56006946CD /* HomeButtonNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6DCE7187CDA56006946CD /* HomeButtonNavView.m */; };
+		93A6DCEF187CE3FC006946CD /* HomeReminderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6DCEE187CE3FC006946CD /* HomeReminderView.m */; };
+		93A6DCF6187D11D4006946CD /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 93A6DCF2187D11D4006946CD /* Readme.md */; };
+		93A6DCF7187D11D4006946CD /* UIView+Borders.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6DCF4187D11D4006946CD /* UIView+Borders.m */; };
 		93ABE3BD1876A80600A7113D /* BPLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABE3BC1876A80600A7113D /* BPLogViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +66,17 @@
 		931B36CC1873CFC4001E8890 /* BPReadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPReadingViewController.h; sourceTree = "<group>"; };
 		931B36CD1873CFC4001E8890 /* BPReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPReadingViewController.m; sourceTree = "<group>"; };
 		93858CFF1875276900CB4D51 /* BPControlModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BPControlModel.xcdatamodel; sourceTree = "<group>"; };
+		93A6DCDF187CD0E0006946CD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		93A6DCE0187CD0E0006946CD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		93A6DCE2187CD388006946CD /* HomeGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeGraphView.h; sourceTree = "<group>"; };
+		93A6DCE3187CD388006946CD /* HomeGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeGraphView.m; sourceTree = "<group>"; };
+		93A6DCE6187CDA56006946CD /* HomeButtonNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeButtonNavView.h; sourceTree = "<group>"; };
+		93A6DCE7187CDA56006946CD /* HomeButtonNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeButtonNavView.m; sourceTree = "<group>"; };
+		93A6DCED187CE3FC006946CD /* HomeReminderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeReminderView.h; sourceTree = "<group>"; };
+		93A6DCEE187CE3FC006946CD /* HomeReminderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeReminderView.m; sourceTree = "<group>"; };
+		93A6DCF2187D11D4006946CD /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.md; sourceTree = "<group>"; };
+		93A6DCF3187D11D4006946CD /* UIView+Borders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Borders.h"; sourceTree = "<group>"; };
+		93A6DCF4187D11D4006946CD /* UIView+Borders.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Borders.m"; sourceTree = "<group>"; };
 		93ABE3BB1876A80600A7113D /* BPLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BPLogViewController.h; path = ../BPLogViewController.h; sourceTree = "<group>"; };
 		93ABE3BC1876A80600A7113D /* BPLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BPLogViewController.m; path = ../BPLogViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +143,7 @@
 			children = (
 				931B36D01873CFF6001E8890 /* Models */,
 				931B36CF1873CFD6001E8890 /* Views */,
+				93A6DCE9187CDEC7006946CD /* Controllers */,
 				931B36A51873A6D3001E8890 /* AppDelegate.h */,
 				931B36A61873A6D3001E8890 /* AppDelegate.m */,
 				931B36AB1873A6D3001E8890 /* Images.xcassets */,
@@ -167,10 +185,8 @@
 		931B36CF1873CFD6001E8890 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				93ABE3BB1876A80600A7113D /* BPLogViewController.h */,
-				93ABE3BC1876A80600A7113D /* BPLogViewController.m */,
-				931B36CC1873CFC4001E8890 /* BPReadingViewController.h */,
-				931B36CD1873CFC4001E8890 /* BPReadingViewController.m */,
+				93A6DCF0187D11D4006946CD /* UIView-Borders */,
+				93A6DCE5187CD38F006946CD /* HomeView */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -182,6 +198,66 @@
 				931B36CA1873A702001E8890 /* BPReading.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		93A6DCE5187CD38F006946CD /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				93A6DCE2187CD388006946CD /* HomeGraphView.h */,
+				93A6DCE3187CD388006946CD /* HomeGraphView.m */,
+				93A6DCE6187CDA56006946CD /* HomeButtonNavView.h */,
+				93A6DCE7187CDA56006946CD /* HomeButtonNavView.m */,
+				93A6DCED187CE3FC006946CD /* HomeReminderView.h */,
+				93A6DCEE187CE3FC006946CD /* HomeReminderView.m */,
+			);
+			name = HomeView;
+			sourceTree = "<group>";
+		};
+		93A6DCE9187CDEC7006946CD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93A6DCEC187CDF0B006946CD /* BPReadingController */,
+				93A6DCEB187CDF00006946CD /* BPLogController */,
+				93A6DCEA187CDEED006946CD /* HomeController */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		93A6DCEA187CDEED006946CD /* HomeController */ = {
+			isa = PBXGroup;
+			children = (
+				93A6DCDF187CD0E0006946CD /* HomeViewController.h */,
+				93A6DCE0187CD0E0006946CD /* HomeViewController.m */,
+			);
+			name = HomeController;
+			sourceTree = "<group>";
+		};
+		93A6DCEB187CDF00006946CD /* BPLogController */ = {
+			isa = PBXGroup;
+			children = (
+				93ABE3BB1876A80600A7113D /* BPLogViewController.h */,
+				93ABE3BC1876A80600A7113D /* BPLogViewController.m */,
+			);
+			name = BPLogController;
+			sourceTree = "<group>";
+		};
+		93A6DCEC187CDF0B006946CD /* BPReadingController */ = {
+			isa = PBXGroup;
+			children = (
+				931B36CC1873CFC4001E8890 /* BPReadingViewController.h */,
+				931B36CD1873CFC4001E8890 /* BPReadingViewController.m */,
+			);
+			name = BPReadingController;
+			sourceTree = "<group>";
+		};
+		93A6DCF0187D11D4006946CD /* UIView-Borders */ = {
+			isa = PBXGroup;
+			children = (
+				93A6DCF2187D11D4006946CD /* Readme.md */,
+				93A6DCF3187D11D4006946CD /* UIView+Borders.h */,
+				93A6DCF4187D11D4006946CD /* UIView+Borders.m */,
+			);
+			path = "UIView-Borders";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				931B36A11873A6D3001E8890 /* InfoPlist.strings in Resources */,
+				93A6DCF6187D11D4006946CD /* Readme.md in Resources */,
 				931B36AC1873A6D3001E8890 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,11 +356,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A6DCE8187CDA56006946CD /* HomeButtonNavView.m in Sources */,
+				93A6DCE4187CD388006946CD /* HomeGraphView.m in Sources */,
 				931B36A71873A6D3001E8890 /* AppDelegate.m in Sources */,
 				931B36CE1873CFC4001E8890 /* BPReadingViewController.m in Sources */,
 				93ABE3BD1876A80600A7113D /* BPLogViewController.m in Sources */,
+				93A6DCEF187CE3FC006946CD /* HomeReminderView.m in Sources */,
 				931B36CB1873A702001E8890 /* BPReading.m in Sources */,
+				93A6DCF7187D11D4006946CD /* UIView+Borders.m in Sources */,
 				931B36A31873A6D3001E8890 /* main.m in Sources */,
+				93A6DCE1187CD0E0006946CD /* HomeViewController.m in Sources */,
 				93858D001875276900CB4D51 /* BPControlModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

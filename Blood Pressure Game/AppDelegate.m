@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HomeViewController.h"
 #import "BPReading.h"
 #import "BPReadingViewController.h"
 #import "BPLogViewController.h"
@@ -19,21 +20,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    BPReadingViewController *bprvc = [[BPReadingViewController alloc] init];
+    HomeViewController *hvc = [[HomeViewController alloc] init];
+    hvc.managedObjectContext = self.managedObjectContext;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hvc];
+    
+    /*BPReadingViewController *bprvc = [[BPReadingViewController alloc] init];
     bprvc.managedObjectContext = self.managedObjectContext;
     
     BPLogViewController *bplvc = [[BPLogViewController alloc] initWithStyle:UITableViewStylePlain];
     bplvc.managedObjectContext = self.managedObjectContext;
     
     UITabBarController *tbc = [[UITabBarController alloc] init];
-    [tbc setViewControllers:@[bprvc, bplvc] animated:YES];
+    [tbc setViewControllers:@[bprvc, bplvc] animated:YES];*/
+ 
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [self.window setRootViewController:tbc];
+    [self.window setRootViewController:navigationController];
     return YES;
 }
 
