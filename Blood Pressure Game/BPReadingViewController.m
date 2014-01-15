@@ -7,6 +7,7 @@
 //
 
 #import "BPReadingViewController.h"
+#import "BPReadingView.h"
 #import "BPReading.h"
 
 @interface BPReadingViewController ()
@@ -25,57 +26,21 @@
     return self;
 }
 
+- (void)loadView
+{
+    _bpReadingView = [[BPReadingView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _bpReadingView.parentViewController = self;
+    
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveButtonPressed:)];
+    self.navigationController.topViewController.navigationItem.rightBarButtonItem = saveButton;
+   
+    [self setView:_bpReadingView];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [[self view] setBackgroundColor:[UIColor grayColor]];
-    
-    UIButton *submitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [submitButton setFrame:CGRectMake(60,350,200,44)];
-    [submitButton setTitle:@"Submit" forState:UIControlStateNormal];
-    [submitButton addTarget:self action:@selector(submitButton:) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.systolicTextField = [[UITextField alloc] initWithFrame:CGRectMake(60, 75, 100, 44)];
-    self.systolicTextField.borderStyle = UITextBorderStyleRoundedRect;
-    self.systolicTextField.placeholder = @"systolic mm/hh...";
-    self.systolicTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
-    self.systolicTextField.returnKeyType = UIReturnKeyNext;
-    self.systolicTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    self.systolicTextField.delegate = self;
-    
-    UILabel *systolicLabel =[[UILabel alloc] initWithFrame:CGRectMake(60, 25, 200, 44)];
-    systolicLabel.text = @"Enter Systolic Value:";
-    
-    self.diastolicTextField = [[UITextField alloc] initWithFrame:CGRectMake(60, 175, 100, 44)];
-    self.diastolicTextField.borderStyle = UITextBorderStyleRoundedRect;
-    self.diastolicTextField.placeholder = @"diastolic mm/hh..";
-    self.diastolicTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
-    self.diastolicTextField.returnKeyType = UIReturnKeyNext;
-    self.diastolicTextField.clearButtonMode = UITextFieldViewModeUnlessEditing;
-    self.diastolicTextField.delegate = self;
-    
-    UILabel *diastolicLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 125, 200, 44)];
-    diastolicLabel.text = @"Enter Diastolic Value:";
-    
-    self.heartRateTextField = [[UITextField alloc] initWithFrame:CGRectMake(60, 275, 100, 44)];
-    self.heartRateTextField.borderStyle = UITextBorderStyleRoundedRect;
-    self.heartRateTextField.placeholder = @"hr";
-    self.heartRateTextField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
-    self.heartRateTextField.returnKeyType = UIReturnKeyDone;
-    self.heartRateTextField.clearButtonMode = UITextFieldViewModeUnlessEditing;
-    self.heartRateTextField.delegate = self;
-    
-    UILabel *heartRateLabel = [[UILabel alloc] initWithFrame:CGRectMake(60, 225, 200, 44)];
-    heartRateLabel.text = @"Enter Heart Rate:";
-    
-    [self.view addSubview:systolicLabel];
-    [self.view addSubview:self.systolicTextField];
-    [self.view addSubview:diastolicLabel];
-    [self.view addSubview:self.diastolicTextField];
-    [self.view addSubview:heartRateLabel];
-    [self.view addSubview:self.heartRateTextField];
-    [self.view addSubview:submitButton];
     
 }
 
@@ -85,30 +50,41 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    [textField resignFirstResponder];
-    return NO;
-}
 
-- (void)submitButton:(UIButton *)sender
+- (void)saveButtonPressed:(UIButton *)sender
 {
     //Should do some validation first. I believe that happens in another delagate method.
-    BPReading *bpr = [[BPReading alloc] initWithEntity:[NSEntityDescription entityForName:@"BPReading" inManagedObjectContext:self.managedObjectContext] insertIntoManagedObjectContext:self.managedObjectContext];
-    
-    bpr.systolic = [NSNumber numberWithInt:self.systolicTextField.text.intValue];
-    bpr.diastolic = [NSNumber numberWithInt:self.diastolicTextField.text.intValue];
-    bpr.heartRate = [NSNumber numberWithInt:self.heartRateTextField.text.intValue];
-    bpr.readingInstant = [NSDate date];
+    BPReading *bpr = [[BPReading alloc] initWithEntity:[NSEntityDescription entityForName:@"BPReading" inManagedObjectContext:_managedObjectContext] insertIntoManagedObjectContext:_managedObjectContext];
+
+    bpr.entryTime = [NSDate date];
+    bpr.systolic = [NSNumber numberWithInt:_bpReadingView.systolicTextField.text.intValue];
+    bpr.diastolic = [NSNumber numberWithInt:_bpReadingView.diastolicTextField.text.intValue];
+    bpr.heartRate = [NSNumber numberWithInt:_bpReadingView.heartRateTextField.text.intValue];
+    bpr.weight = [NSNumber numberWithInt:_bpReadingView.weightTextField.text.intValue];
+
+    bpr.readingInstant = [NSDate date]; //need to update to pull from input text field or picker
+    bpr.comment = @"need to implement"; // need to implement
     
     NSLog(@"%@", bpr);
     
     NSError *error;
-    [self.managedObjectContext save:&error];
+    [_managedObjectContext save:&error];
     
-    self.systolicTextField.text = @"";
-    self.diastolicTextField.text = @"";
-    self.heartRateTextField.text = @"";
+    _bpReadingView.systolicTextField.text = nil;
+    _bpReadingView.diastolicTextField.text = nil;
+    _bpReadingView.heartRateTextField.text = nil;
+    _bpReadingView.weightTextField.text = nil;
+    _bpReadingView.readingInstantTextField.text = [NSDateFormatter localizedStringFromDate:[NSDate date] dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle];
+    _bpReadingView.commentTextArea.text = nil;
+    
+    //[self.navigationController popToRootViewControllerAnimated:YES];
+    
+    [UIView animateWithDuration:0.50
+                     animations:^{
+                         [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+                         [self.navigationController popToRootViewControllerAnimated:YES];  //remember blocks are closures and therefore the view controller is in scope
+                         [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.navigationController.view cache:NO];
+                         }];
 }
 
 @end

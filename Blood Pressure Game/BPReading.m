@@ -9,6 +9,7 @@
 #import "BPReading.h"
 
 @implementation BPReading
+@dynamic entryTime;
 @dynamic readingInstant;
 @dynamic systolic;
 @dynamic diastolic;
@@ -18,7 +19,7 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"systolic:%@ diastolic:%@ heart rate:%@ timpestamp:%@", self.systolic, self.diastolic, self.heartRate, self.readingInstant];
+    return [NSString stringWithFormat:@"timestamp:%@ - systolic:%@ diastolic:%@, pulse:%@ weight:%@, comment:%@", self.readingInstant, self.systolic, self.diastolic, self.heartRate, self.weight, self.comment];
 }
 
 @end

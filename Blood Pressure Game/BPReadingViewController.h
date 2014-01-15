@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BPReadingView;
 
-@interface BPReadingViewController : UIViewController <UITextFieldDelegate>
+@interface BPReadingViewController : UIViewController
 
-@property (strong, nonatomic) UITextField *systolicTextField;
-@property (strong, nonatomic) UITextField *diastolicTextField;
-@property (strong, nonatomic) UITextField *heartRateTextField;
-
+@property (strong, nonatomic) BPReadingView *bpReadingView;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

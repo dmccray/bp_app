@@ -24,23 +24,23 @@
     hvc.managedObjectContext = self.managedObjectContext;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:hvc];
     
-    /*BPReadingViewController *bprvc = [[BPReadingViewController alloc] init];
-    bprvc.managedObjectContext = self.managedObjectContext;
+    //BPReadingViewController *bprvc = [[BPReadingViewController alloc] init];
+    //bprvc.managedObjectContext = self.managedObjectContext;
     
-    BPLogViewController *bplvc = [[BPLogViewController alloc] initWithStyle:UITableViewStylePlain];
-    bplvc.managedObjectContext = self.managedObjectContext;
+    //BPLogViewController *bplvc = [[BPLogViewController alloc] initWithStyle:UITableViewStylePlain];
+    //bplvc.managedObjectContext = self.managedObjectContext;
     
-    UITabBarController *tbc = [[UITabBarController alloc] init];
-    [tbc setViewControllers:@[bprvc, bplvc] animated:YES];*/
+    //UITabBarController *tbc = [[UITabBarController alloc] init];
+    //[tbc setViewControllers:@[bprvc, bplvc] animated:YES];*/
  
     
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    _window.backgroundColor = [UIColor whiteColor];
+    [_window makeKeyAndVisible];
     
-    [self.window setRootViewController:navigationController];
+    [_window setRootViewController:navigationController];
     return YES;
 }
 

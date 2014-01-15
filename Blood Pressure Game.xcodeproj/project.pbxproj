@@ -24,6 +24,7 @@
 		931B36CB1873A702001E8890 /* BPReading.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36CA1873A702001E8890 /* BPReading.m */; };
 		931B36CE1873CFC4001E8890 /* BPReadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 931B36CD1873CFC4001E8890 /* BPReadingViewController.m */; };
 		93858D001875276900CB4D51 /* BPControlModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93858CFE1875276900CB4D51 /* BPControlModel.xcdatamodeld */; };
+		93943B64188656C2008634E3 /* BPReadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93943B63188656C2008634E3 /* BPReadingView.m */; };
 		93A6DCE1187CD0E0006946CD /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6DCE0187CD0E0006946CD /* HomeViewController.m */; };
 		93A6DCE4187CD388006946CD /* HomeGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6DCE3187CD388006946CD /* HomeGraphView.m */; };
 		93A6DCE8187CDA56006946CD /* HomeButtonNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A6DCE7187CDA56006946CD /* HomeButtonNavView.m */; };
@@ -66,6 +67,8 @@
 		931B36CC1873CFC4001E8890 /* BPReadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPReadingViewController.h; sourceTree = "<group>"; };
 		931B36CD1873CFC4001E8890 /* BPReadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPReadingViewController.m; sourceTree = "<group>"; };
 		93858CFF1875276900CB4D51 /* BPControlModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BPControlModel.xcdatamodel; sourceTree = "<group>"; };
+		93943B62188656C2008634E3 /* BPReadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPReadingView.h; sourceTree = "<group>"; };
+		93943B63188656C2008634E3 /* BPReadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPReadingView.m; sourceTree = "<group>"; };
 		93A6DCDF187CD0E0006946CD /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		93A6DCE0187CD0E0006946CD /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		93A6DCE2187CD388006946CD /* HomeGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeGraphView.h; sourceTree = "<group>"; };
@@ -185,6 +188,7 @@
 		931B36CF1873CFD6001E8890 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				93943B65188656C9008634E3 /* BPReadingView */,
 				93A6DCF0187D11D4006946CD /* UIView-Borders */,
 				93A6DCE5187CD38F006946CD /* HomeView */,
 			);
@@ -198,6 +202,15 @@
 				931B36CA1873A702001E8890 /* BPReading.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		93943B65188656C9008634E3 /* BPReadingView */ = {
+			isa = PBXGroup;
+			children = (
+				93943B62188656C2008634E3 /* BPReadingView.h */,
+				93943B63188656C2008634E3 /* BPReadingView.m */,
+			);
+			name = BPReadingView;
 			sourceTree = "<group>";
 		};
 		93A6DCE5187CD38F006946CD /* HomeView */ = {
@@ -365,6 +378,7 @@
 				931B36CB1873A702001E8890 /* BPReading.m in Sources */,
 				93A6DCF7187D11D4006946CD /* UIView+Borders.m in Sources */,
 				931B36A31873A6D3001E8890 /* main.m in Sources */,
+				93943B64188656C2008634E3 /* BPReadingView.m in Sources */,
 				93A6DCE1187CD0E0006946CD /* HomeViewController.m in Sources */,
 				93858D001875276900CB4D51 /* BPControlModel.xcdatamodeld in Sources */,
 			);

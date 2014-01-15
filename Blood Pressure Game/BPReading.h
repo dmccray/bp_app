@@ -11,10 +11,11 @@
 @interface BPReading : NSManagedObject
 
 @property (strong, nonatomic) NSDate    *readingInstant;
-@property (nonatomic) NSNumber          *systolic;
-@property (nonatomic) NSNumber          *diastolic;
-@property (nonatomic) NSNumber          *heartRate;
-@property (nonatomic) NSNumber          *weight; 
+@property (strong, nonatomic) NSDate    *entryTime;
+@property (strong, nonatomic) NSNumber  *systolic;
+@property (strong, nonatomic) NSNumber  *diastolic;
+@property (strong, nonatomic) NSNumber  *heartRate;
+@property (strong, nonatomic) NSNumber  *weight;
 @property (strong, nonatomic) NSString  *comment;
 
 @end
